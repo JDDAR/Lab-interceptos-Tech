@@ -20,14 +20,14 @@ const Login = () => {
       localStorage.setItem("token", token);
       //Despacho la acion al slice
       dispatch(loginSuccess(token));
-      alert("Login exitoso. Token guardado...");
+      alert("Login exitoso. Token guardado.......... TOKEN : " + token);
     } catch (error) {
       console.error("Error en login: ", error);
     }
   };
 
   return (
-    <form onClick={hadleLogin}>
+    <form onSubmit={hadleLogin}>
       <h2>Login</h2>
       <input
         type="email"

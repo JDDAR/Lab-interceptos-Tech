@@ -6,16 +6,18 @@ import { setUser } from "../redux/userSlice";
 const FetchUser = () => {
   const [userId, setUserId] = useState("");
   const dispatch = useDispatch();
-  const users = useSelector((state) => state.users.users);
+  const users = useSelector((state) => state.user.users);
 
   const handleFetchUser = async (e) => {
     e.preventDefault();
     try {
-      const response = await iAX.get(`/users/${userId} `);
+      const response = await iAX.get(`/users/${userId}`);
       const user = response.data.data;
+      console.log("user Fetch : ", user);
       dispatch(setUser([user]));
     } catch (error) {
       console.log("Error Obteniendo usuario...", error);
+      alert("El usuario con id : " + userId + " No Existe en la API");
     }
   };
 
@@ -23,6 +25,7 @@ const FetchUser = () => {
     <div>
       <h2>Obtener usuario</h2>
       <form onSubmit={handleFetchUser}>
+        <label> USUARIOS API: con id del 1 -12 </label>
         <input
           type="text"
           placeholder="ID de usuario"
