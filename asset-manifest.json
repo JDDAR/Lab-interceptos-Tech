@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Lab-interceptos-Tech/static/css/main.20412677.css",
+    "main.js": "/Lab-interceptos-Tech/static/js/main.d914d945.js",
+    "index.html": "/Lab-interceptos-Tech/index.html",
+    "main.20412677.css.map": "/Lab-interceptos-Tech/static/css/main.20412677.css.map",
+    "main.d914d945.js.map": "/Lab-interceptos-Tech/static/js/main.d914d945.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20412677.css",
+    "static/js/main.d914d945.js"
+  ]
+}
