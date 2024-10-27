@@ -1,0 +1,36 @@
+@import "../variables";
+form {
+  border-bottom: 1px solid rgba($color-font-primary, 0.2);
+  padding: 25px;
+  .container-input {
+    display: flex;
+    gap: 15px;
+  }
+  .info-forms {
+    background-color: rgba($color-font-primary, 0.05);
+    line-height: 0.5rem;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    border-left: 3px solid $color-bg;
+    font-weight: 200;
+    span {
+      font-weight: 500;
+    }
+  }
+  input {
+    padding: 8px;
+    border-radius: 6px;
+  }
+  button {
+    padding: 8px 15px;
+    border-radius: 6px;
+    background-color: $color-bg;
+    border: none;
+    color: $color-font-primary;
+  }
+}
+.respuestaUsuarios {
+  padding: 25px;
+}

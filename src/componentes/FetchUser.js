@@ -23,20 +23,27 @@ const FetchUser = () => {
 
   return (
     <div>
-      <h2>Obtener usuario</h2>
       <form onSubmit={handleFetchUser}>
-        <label> USUARIOS API: con id del 1 -12 </label>
-        <input
-          type="text"
-          placeholder="ID de usuario"
-          value={userId}
-          onChange={(e) => setUserId(e.target.value)}
-          required
-        />
-        <button type="submit">BUSCAR</button>
+        <h2>Obtener usuario</h2>
+        <div className="info-forms">
+          <p>
+            Ingrese Id con usuarios que existen en la api :{" "}
+            <span> ID : 1 - 12 </span>{" "}
+          </p>
+        </div>
+        <div className="container-input">
+          <input
+            type="text"
+            placeholder="ID de usuario"
+            value={userId}
+            onChange={(e) => setUserId(e.target.value)}
+            required
+          />
+          <button type="submit">BUSCAR</button>
+        </div>
       </form>
       {users.length > 0 && (
-        <div>
+        <div className="respuestaUsuarios">
           <h3>Usuario Encontrado</h3>
           <p>
             Nombre : {users[0].first_name} {users[0].last_name}

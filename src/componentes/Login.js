@@ -29,20 +29,30 @@ const Login = () => {
   return (
     <form onSubmit={hadleLogin}>
       <h2>Login</h2>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-      <button type="submit">ENVIAR</button>
+      <div className="info-forms">
+        <p> utilice las siguientes credenciales para probar el login </p>
+        <p>
+          {" "}
+          <span>Email : </span> eve.holt@reqres.in <span>Password : </span>
+          cityslicka
+        </p>
+      </div>
+      <div className="container-input">
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button type="submit">ENVIAR</button>
+      </div>
     </form>
   );
 };

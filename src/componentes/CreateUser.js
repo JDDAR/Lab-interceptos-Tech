@@ -26,20 +26,22 @@ const CreateUser = () => {
   return (
     <form onSubmit={handleCreateUser}>
       <h2>Crear Usuario</h2>
-      <input
-        type="text"
-        placeholder=" Nombre"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Trabajo"
-        value={job}
-        onChange={(e) => setJob(e.target.value)}
-        required
-      />
-      <button type="submit">CREAR USUARIO</button>
+      <div className="container-input">
+        <input
+          type="text"
+          placeholder=" Nombre"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Trabajo"
+          value={job}
+          onChange={(e) => setJob(e.target.value)}
+          required
+        />
+        <button type="submit">CREAR USUARIO</button>
+      </div>
     </form>
   );
 };
